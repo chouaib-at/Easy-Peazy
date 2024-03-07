@@ -1,10 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Back from "./Back";
+import Button1 from "./Buttons/Button1/Button1";
 const Button = () => {
   return (
     <div>
-      qwdwqdqwd
+      <Button1 />
       <Back />
     </div>
   );

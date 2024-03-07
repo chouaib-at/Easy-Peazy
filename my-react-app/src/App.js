@@ -1,27 +1,22 @@
 import React from "react";
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
-import "./App.css";
-
-import Buttons from "./components/Button.jsx";
-import Footer from "./components/Footer";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Button from "./components/Button";
 import Navbar from "./components/Navbar";
-import ButtonsPage from "./components/Buttonpage.js";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
 
 const App = () => {
   return (
-    <Router>
-      <div className="app">
-        <Navbar />
-
-        <Route path="/buttons" component={ButtonsPage} />
-
-        <Buttons />
-        <Footer />
-        <NavLink to="/" className="nav-link">
-          <button>Back</button>
-        </NavLink>
-      </div>
-    </Router>
+    <div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Buttons" element={<Button />} />
+          <Route path="/Navbar" element={<Navbar />} />
+          <Route path="/Footer" element={<Footer />} />
+        </Routes>
+      </Router>
+    </div>
   );
 };
 
